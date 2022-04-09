@@ -9,7 +9,6 @@ export const ROUTE_CONSTANTS = {
 
 export const STRINGS = {
   /** Login page */
-  NEUTRON: "Neutron",
   LOGIN_PAGE_TITLE: "Login",
   LOGIN_PAGE_CONTENT: "Please sign-in to your account and start the Legalism",
   SIGNUP_PAGE_TITLE: "Sign Up",
@@ -29,44 +28,7 @@ export const STRINGS = {
   CONFIRM_PASSWORD: "Confirm Password",
   NEW_PASSWORD: "New Password",
   LOGIN_TO_ACCOUNT: "Login",
-  CREATE_ACCOUNT: "Create Account",
-  FIRST_NAME: "Name",
-  LAST_NAME: "Last Name",
-  ABOUT_US: "About Us",
-  CONTACT_US: "Contact Us",
-  PRIVACY_POLICY: "Privacy Policy",
-  COPYRIGHT: "Copyright © 2021 Neutron",
-  CONFIRM: "Confirm",
-  RESEND_OTP: "Resend OTP",
-  OTP_SCREEN_TITLE: "Enter OTP",
-  OTP_SENT_LINE_1: `We’ve sent a verification code to your email.`,
-  OTP_SENT_LINE_2: ` Enter the code from your email in the field below.`,
-  PHONE_AND_EMAIL: "Phone Number and Email Address",
-  PHONE_NUMBER: "Phone Number",
-  COMPANY_NAME: "Username",
-  COUNTRY: "Country",
-  START_TRIAL: "Create Account",
-  SEE_PLANS: "See Plans",
-  FORGOT_PWD_SUBTITLE:
-    "Don’t worry! It happens. Please enter the email address associated with your account.",
-  BACK_TO_SIGN_IN: "Back to Sign In",
-  EMAIL_ADDRESS: "Email Address",
-  CREATE_PASSWORD: "Reset Password",
-  RESET_PWD_SUBTITLE: "Reset your password to access your Legitron portal",
-  PASSWORD_RESET_CODE: "Password Reset Code",
-  UPDATE_PASSWORD: "Update Password",
-  LOGOUT: "Logout",
-  COMING_SOON: "Coming Soon!",
-  SKIP: "Skip",
-  UPLOAD_AGREEMENT: "Upload Agreement",
-  SUBMIT: "Submit",
-  AGREEMENT_NAME: "Agreement Name",
-  AGREEMENT_TYPE: "Type of Agreement",
-  AGREEMNET_DATE: "Select Date (To - From)",
-  REASON_FOR_RETURN_REVIEWER: "Please add reason",
-  SHARE_TO_VENDOR: "Please write email",
-  PLACEHOLDER_VENDOR: "⚉ ⚉ ⚉ ⚉ ⚉ ⚉ ⚉ ",
-  ESIGN_PROCESS: "Please enter details for e-sign process",
+
 };
 
 export const INPUT_FIELD_NAMES = {

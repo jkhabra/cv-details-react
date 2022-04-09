@@ -1,7 +1,6 @@
 /* eslint-disable */
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import {Helmet} from "react-helmet";
+import { Link } from "react-router-dom";
 
 import SignInForm from "../../../components/signinForm";
 import { ROUTE_CONSTANTS, STRINGS } from "../../../utils";
@@ -22,11 +21,6 @@ const Singin: React.FC = () => {
 
   return (
     <div className="login-auth-wrapper">
-
-<Helmet>
-                <title>My Title</title>
-            </Helmet>
-
       <div className="auth-container">
         <div className="authentication_page">
           <div className="auth-bg-wrapper">
