@@ -1,0 +1,20 @@
+@import "src/scss/lib";
+
+.form-group {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 6em;
+}
+
+.field-error {
+  @extend %handle-text-overflow;
+
+  width: 100%;
+  font-size: 14px;
+  color: $color-text-error;
+  position: absolute;
+  font-size: 1em;
+  bottom: -10px;
+}

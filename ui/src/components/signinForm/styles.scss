@@ -1,0 +1,81 @@
+@import "src/scss/lib";
+
+.singin-form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .form-group {
+    width: 100%;
+
+    label {
+      color: #6e6b7b;
+    }
+
+    .auth-text-field {
+      @extend %form--text-field;
+
+      height: 38px;
+      width: 90%;
+      font-size: 0.8em;
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+    }
+
+    .auth-password-field {
+      width: 90%;
+      height: 38px;
+      font-size: 0.8em;
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+      margin-top: 0em !important;
+    }
+
+    .field-error {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.auth-checkbox {
+  margin-top: 0.5em;
+  color: #6e6b7b;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.9em;
+  column-gap: 5px;
+
+  input {
+    cursor: pointer;
+    :focus {
+      outline: none;
+    }
+  }
+}
+
+.signin-submit {
+  @extend %form-submit-btn;
+  min-width: 20em;
+  margin-top: 10px;
+
+  button {
+    background: #4361ee;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    border-radius: 3px;
+    text-align: center;
+    padding: 8px 22px;
+    font-size: 1em;
+  }
+}
+
+/* Change the white to any color */
+input:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 50px white inset;
+}
