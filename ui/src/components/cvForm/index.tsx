@@ -34,34 +34,20 @@ const CvForm = (p: Props) => {
   //const dispatch = useDispatch();
 
   const onFinish = async (values: any, actions: any) => {
-    console.log("---values--", values);
-
     try {
       setProcessing(true);
-      const formData = new FormData();
-      formData.append("first_name", values.first_name);
-      formData.append("last_name", values.last_name);
-      formData.append("email", values.email);
-      formData.append("phone_number", values.phone_number);
-      formData.append("live_in_us", values.live_in_us);
-      formData.append("git_profile", values.git_profile);
-      formData.append("Cv", values.Cv);
-      formData.append("cover_letter", values.cover_letter);
-      formData.append("about_you", values.about_you);
+      const res: any = await postRequest("/posts", false, values);
+      const { status }: any = res || {};
+      // console.log(res, "-----res------", status);
 
-      // setProcessing(false);
-      //return;
-
-      const res: any = await postRequest("/posts", false, formData);
-      const { data }: any = res || {};
-      console.log(res, "-----res------");
-      if (data) {
+      if (status === 200 || status === 201) {
         message.success("Cv issuccessfully submitted!");
         actions.resetForm();
         p.onAction(0);
       } else {
         message.error("Something went wrong!");
       }
+      setProcessing(false);
     } catch (e) {
       setProcessing(false);
       message.error("Something went wrong!");
@@ -88,7 +74,7 @@ const CvForm = (p: Props) => {
         onFinish(values, actions);
       }}
     >
-      {({values, handleSubmit, setFieldValue, touched, errors }) => (
+      {({ values, handleSubmit, setFieldValue, touched, errors }) => (
         <Form className="form-container">
           {p.step === 0 && (
             <>
@@ -192,9 +178,15 @@ const CvForm = (p: Props) => {
               />
 
               <div className="auth-checkbox">
-                <input name="live_in_us" type="checkbox" value="remember-me" id="remember_me" onClick={() => {
-                      setFieldValue("live_in_us", !values.live_in_us);
-                    }} />
+                <input
+                  name="live_in_us"
+                  type="checkbox"
+                  value="remember-me"
+                  id="remember_me"
+                  onClick={() => {
+                    setFieldValue("live_in_us", !values.live_in_us);
+                  }}
+                />
                 <label>Do you live in the US? *</label>
               </div>
 
@@ -203,7 +195,11 @@ const CvForm = (p: Props) => {
                   Submit
                 </Button>
 
-                <Button disabled={processing} style={{ margin: "0 8px" }} onClick={() => p.prevAction()}>
+                <Button
+                  disabled={processing}
+                  style={{ margin: "0 8px" }}
+                  onClick={() => p.prevAction()}
+                >
                   Previous
                 </Button>
               </div>
