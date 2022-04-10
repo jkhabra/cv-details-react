@@ -1,0 +1,82 @@
+@import "src/scss/lib";
+
+.form-container {
+  width: 90%;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .form-group {
+    width: 100%;
+
+    label {
+      color: #6e6b7b;
+    }
+
+    .auth-text-field {
+      @extend %form--text-field;
+
+      height: 38px;
+      width: 90%;
+      font-size: 0.8em;
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+    }
+
+    .field-error {
+      font-size: 0.8em;
+    }
+  }
+
+  .half-row {
+    width: 100%;
+    display: flex;
+  }
+
+  .file-upload {
+    width: 100%;
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    min-height: 4.5em;
+
+    .field-error {
+      font-size: 0.8em;
+    }
+  }
+}
+
+.auth-checkbox {
+  margin-top: 0.5em;
+  color: #6e6b7b;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.9em;
+  column-gap: 5px;
+
+  input {
+    cursor: pointer;
+    :focus {
+      outline: none;
+    }
+  }
+}
+
+.steps-action {
+  margin-top: 3em;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Change the white to any color */
+input:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-box-shadow: 0 0 0 50px white inset;
+}

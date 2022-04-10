@@ -9,7 +9,7 @@ const axiosInstance = axios.create({
   baseURL: config.apiUrl,
   timeout: 60000,
   headers: {
-    "content-type": "application/json",
+    "content-type": "application/json;charset=UTF-8&#39",
   },
 });
 
